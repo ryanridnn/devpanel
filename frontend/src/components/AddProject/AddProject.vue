@@ -154,9 +154,12 @@ export default {
 				!this.desc ||
 				!this.path.source ||
 				!this.path.url ||
-				this.deployed.isDeployed === null ||
-				this.tags.length === 0
+				this.deployed.isDeployed === null
 			) {
+				this.$store.commit("openPopup", {
+					title: "Fill the form",
+					message: "You need to fill the form in order to add.",
+				});
 				return;
 			}
 

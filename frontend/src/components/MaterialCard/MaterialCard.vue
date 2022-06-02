@@ -93,7 +93,8 @@ export default {
 	}
 
 	&__main-detail {
-		@extend .flex-y-center;
+		display: grid;
+		grid-template-columns: 1fr auto;
 		justify-content: space-between;
 		gap: 0.25rem;
 		margin-top: 0.75rem;

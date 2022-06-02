@@ -71,12 +71,11 @@ export default {
 				tags: this.tags,
 			};
 
-			if (
-				!material._id ||
-				!material.name ||
-				!material.url ||
-				!material.tags
-			) {
+			if (!material._id || !material.name || !material.url) {
+				this.$store.commit("openPopup", {
+					title: "Fill the form",
+					message: "You need to fill the form in order to update.",
+				});
 				return;
 			} else if (
 				material.name === this.material.name &&

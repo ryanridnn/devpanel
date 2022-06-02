@@ -33,7 +33,6 @@ const projectSchema = new mongoose.Schema({
 	},
 	tags: {
 		type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tag" }],
-		required: true,
 	},
 	createdAt: {
 		type: Date,

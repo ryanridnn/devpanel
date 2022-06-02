@@ -155,7 +155,7 @@ export const updateProject = async (req, res) => {
       isDeployed: isDeployed === "true",
       url: deployedUrl || null,
     },
-    tags,
+    tags: tags ? tags : [],
   };
 
   if (req.file) {

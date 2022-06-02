@@ -100,9 +100,12 @@ export default {
 				!repo.name ||
 				!repo.desc ||
 				!repo.path.source ||
-				!repo.path.url ||
-				repo.tags.length === 0
+				!repo.path.url
 			) {
+				this.$store.commit("openPopup", {
+					title: "Fill the form",
+					message: "You need to fill the form in order to update.",
+				});
 				return;
 			}
 

@@ -66,7 +66,11 @@ export default {
 				tags: this.tags,
 			};
 
-			if (!material.name || !material.url || material.length === 0) {
+			if (!material.name || !material.url) {
+				this.$store.commit("openPopup", {
+					title: "Fill the form",
+					message: "You need to fill the form in order to add.",
+				});
 				return;
 			}
 
