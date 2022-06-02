@@ -146,7 +146,7 @@ export default {
 			this._id = _id;
 			this.name = name;
 			this.desc = desc;
-			this.path = path || { source: "Github", url: null };
+			this.path = path ? { ...path } : { source: "Github", url: null };
 			this.tags = tags ? [...tags] : [];
 		},
 	},
