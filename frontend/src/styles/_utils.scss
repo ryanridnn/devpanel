@@ -1,0 +1,101 @@
+.flex {
+	display: flex;
+}
+
+.flex-h-center {
+	@extend .flex;
+	justify-content: center;
+}
+
+.flex-y-center {
+	@extend .flex;
+	align-items: center;
+}
+
+.flex-center {
+	@extend .flex-h-center;
+	align-items: center;
+}
+
+.relative {
+	position: relative;
+}
+
+.scale-9 {
+	transform: scale(0.9);
+}
+
+.icon {
+	cursor: pointer;
+	height: 1.5rem;
+
+	&-sm {
+		cursor: pointer;
+		height: 1.125rem;
+	}
+}
+
+.btn {
+	@include transition-base(transform);
+	&__hover--shrink {
+		&:hover {
+			@extend .scale-9;
+		}
+		// &:focus {
+		// 	@extend .scale-9;
+		// }
+	}
+
+	&__focus--shrink {
+		&:focus {
+			@extend .scale-9;
+		}
+		// &:focus {
+		// 	@extend .scale-9;
+		// }
+	}
+}
+
+.toggle {
+	@extend .flex-y-center;
+	padding: 0.25rem;
+	// height: 1.125rem;
+	width: 2.25rem;
+	border-radius: 4rem;
+	background: $clr-dark-2;
+
+	--translateX: 0;
+
+	&__circle {
+		width: 0.75rem;
+		height: 0.75rem;
+		border-radius: 100%;
+		background: $clr-neutral-1;
+		transform: translateX(var(--translateX));
+		@include transition-base(all);
+	}
+
+	&--active {
+		background: $clr-primary !important;
+		// justify-content: flex-end;
+		--translateX: 16px !important;
+	}
+}
+
+.p {
+	font-size: $font-base;
+	font-family: $font-secondary;
+	line-height: 1.375rem;
+
+	&--sm {
+		font-size: $font-sm;
+		line-height: 1.125rem;
+	}
+}
+
+.no-content {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 4rem;
+}

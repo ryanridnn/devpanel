@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font-primary;
+
+	scrollbar-width: 8px;
+	scrollbar-color: $clr-primary-light;
+}
+
+body {
+	background: $clr-neutral-2;
+	color: $clr-dark-1;
+	min-height: 100vh;
+}
+
+a {
+	cursor: pointer;
+	color: $clr-secondary;
+	text-decoration: none;
+}
+
+input::placeholder {
+	color: $clr-dark-3;
+
+	@include transition-base(color);
+}
+
+input[disabled]::placeholder {
+	color: #aaaaaa;
+}
+
+button {
+	font-size: 1rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+::-webkit-scrollbar {
+	width: 9px;
+}
+
+::-webkit-scrollbar-track {
+	background: #bce2de;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $clr-primary-light;
+	border-radius: 20rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $clr-primary;
+}

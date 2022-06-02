@@ -1,0 +1,71 @@
+// font families
+$font-primary: "Prompt", sans-serif;
+$font-secondary: "Nunito Sans", sans-serif;
+
+// font sizes
+$font-2xs: 0.625rem;
+$font-xs: 0.75rem;
+$font-sm: 0.875rem;
+$font-base: 1rem;
+$font-lg: 1.125rem;
+$font-xl: 1.25rem;
+$font-2xl: 1.375rem;
+
+//  primary color
+$clr-primary: #21625a;
+$clr-primary-dark: #17554e;
+$clr-primary-light: #2b766d;
+
+$clr-on-primary: #ffffff;
+$clr-on-primary-blend-1: #d6dfde;
+$clr-on-primary-blend-2: #89a8a4;
+
+// secondary color
+$clr-secondary: #3c63ab;
+$clr-secondary-greyish: #eef4ff; // input field bg
+
+// accent color
+// this is actually the accent for the primary color, maybe only works for it.
+$clr-accent: #dbe280;
+$clr-on-accent: #17554e;
+
+// tags
+$clr-tag-1: $clr-secondary;
+$clr-tag-2: $clr-primary-light;
+$clr-tag-3: #ab3c64;
+
+$clr-dark-1: #212121;
+$clr-dark-2: #555555;
+$clr-dark-3: #777777;
+
+$clr-neutral-1: #ffffff;
+$clr-neutral-2: #f4f4f4;
+$clr-neutral-3: #fbfbfb;
+
+$border-1: 0.5px solid #dddddd;
+$border-2: 0.5px solid #cecece;
+
+$shadow: 4px 8px 16px rgba(0, 0, 0, 0.05);
+
+// breakpoints
+
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+$screen-2xl: 1536px;
+$screen-3xl: 1920px;
+
+@mixin transition($type, $duration, $tfunction) {
+	transition: $type $duration $tfunction;
+}
+
+@mixin transition-base($type) {
+	@include transition($type, 0.15s, linear);
+}
+
+@mixin responsive($screen) {
+	@media only screen and (min-width: #{$screen}) {
+		@content;
+	}
+}
