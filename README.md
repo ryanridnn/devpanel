@@ -8,7 +8,7 @@
 
 ## Devpanel: Save the important resource of your developer journey.
 
-Take a look at the [live demo]() site here &nbsp; :eyes:
+Take a look at the [live demo](https://devpanel.netlify.app/projects) site here &nbsp; :eyes:
 
 Always confused to save your important developer resources? Now, meet DevPanel. DevPanel let you save your project, repo, or even material.
 
